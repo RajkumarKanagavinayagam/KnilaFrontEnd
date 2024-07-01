@@ -1,0 +1,9 @@
+<div  class="close-btn">
+    <img  src="../../../assets/Frame 62.png" alt="" (click)="closeDialog(false)">
+  </div>
+<h2 mat-dialog-title class="delete_popup_head">Confirmation</h2>
+<mat-dialog-content class="delete_popup_message">{{ data.message }}</mat-dialog-content>
+<mat-dialog-actions class="button-check-wrapper add-pharmacy">
+    <button class="right-btn" mat-button (click)="closeDialog(true)" [ngStyle]="{ 'margin-right': '8px','width':'70px'  }">Yes</button>
+    <button class="left-btn" mat-button (click)="closeDialog(false)"[ngStyle]="{'width':'70px'}">No</button>
+</mat-dialog-actions>

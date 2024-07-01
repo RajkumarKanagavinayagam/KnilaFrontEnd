@@ -1,0 +1,185 @@
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #1998F1;
+}
+
+input:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.23px;
+    color: #333333;
+}
+
+.button-check-wrapper {
+    display: flex;
+    grid-area: 25px;
+    margin: 20px 0px;
+}
+
+/* add pharmacy start here */
+
+.add_pharmacy_container {
+    width: 50%;
+    margin-left: 36px;
+}
+
+.add_pharmacy_header_container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+.add_pharmacy_header_container .head {
+    font-size: 24px;
+    color: #343A40;
+    line-height: 31.25px;
+    font-weight: 500;
+}
+
+.add_pharmacy_form_container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+label.btn,
+.btn {
+    background-color: transparent;
+    border: 1px solid #DDDDDD;
+    width: 154px;
+    height: 48px;
+    line-height: 18.23px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.pre {
+    border: 1px solid #303030;
+    background-color: transparent;
+    color: #303030;
+    font-weight: 400;
+}
+
+.next {
+    background-color: #1998F1;
+    color: #fff;
+    font-weight: 400;
+}
+
+.add-patient.button-check-wrapper {
+    width: 350px;
+    justify-content: space-between;
+}
+
+.common-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input_label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+    line-height: 18.23px;
+    width: 150px;
+}
+
+input {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.23px;
+    color: #333333;
+    flex-grow: 1;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.select-container {
+    position: relative;
+}
+
+.select-container label {
+    font-size: 14px;
+    font-weight: 400;
+    width: 150px;
+    color: #767676;
+    line-height: 18.23px;
+    width: 150px;
+}
+
+select {
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 16px 26px 14px 9px;
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.23px;
+    flex-grow: 1;
+}
+
+.time-container {
+    justify-content: flex-start;
+}
+
+#from-time {
+    margin-right: 15px;
+}
+
+.add-pharmacy.button-check-wrapper {
+    width: 350px;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+select:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select~.down-arrow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* add pharmacy end here */
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: -24px;
+    margin-top: 22px;
+    background-color: #404040;
+    cursor: pointer;
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.is-invalid {
+    border: red 1px solid !important;
+}

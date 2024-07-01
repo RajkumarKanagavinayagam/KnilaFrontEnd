@@ -1,0 +1,113 @@
+<div class="close-btn">
+  <img src="../../../assets/Frame 62.png" alt="" (click)="closeDialog()" />
+</div>
+
+<div class="add_pharmacy_container">
+  <div class="add_pharmacy_header_container">
+    <div class="head">Edit Contact</div>
+  </div>
+
+  <div class="add_pharmacy_form_container">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="common-input">
+        <label class="input_label" for="firstName">First Name:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="firstName"
+          name="firstName"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="lastName">Last Name:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="lastName"
+          name="lastName"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="phone">Phone:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="phoneNumber"
+          name="phoneNumber"
+          formControlName="phoneNumber"
+          (keypress)="onKeyPress($event)"
+        />
+      </div>
+
+      <div class="common-input">
+        <label class="input_label" for="email">Email:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="email"
+          name="email"
+          formControlName="email"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="address">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="address">Address:</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          formControlName="address"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="city">City:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="city"
+          name="city"
+          formControlName="city"
+        />
+      </div>
+
+      <div class="common-input">
+        <label class="input_label" for="state">State:</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="state"
+          name="state"
+          formControlName="state"
+        />
+      </div>
+
+      <div class="common-input">
+        <label class="input_label" for="country">Country:</label>
+        <input
+          type="text"
+          id="country"
+          name="country"
+          formControlName="country"
+        />
+      </div>
+      <div class="common-input">
+        <label class="input_label" for="postalCode">Postal Code:</label>
+        <input type="text" id="code" name="code" formControlName="postalCode" />
+      </div>
+      <div class="button-check-wrapper add-pharmacy">
+        <a class="btn pre" (click)="closeDialog()"> Cancel </a>
+        <button class="btn next">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

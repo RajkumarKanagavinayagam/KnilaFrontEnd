@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif !important;
+}
+
+.mdc-dialog__surface {
+    overflow: visible !important;
+    position: relative;
+}
+
+.mat-mdc-tab-label-container {
+    display: none !important;
+}
+
+mat-tab-header {
+    height: 0px;
+}
+
+.body-content {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+}
+
+textarea:focus-visible {
+    outline: none;
+    box-shadow: none;
+
+}
+
+.cdk-global-overlay-wrapper {
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    overflow: auto;
+
+}
+
+.cdk-overlay-container {
+    background: rgb(48 48 48 / 30%);
+}
+
+.ngx-pagination .current {
+    background: #2199e8;
+    color: #fefefe;
+    cursor: default;
+    border-radius: 8px;
+    padding: 6px 15px !important;
+    max-width: 35px;
+}
+
+.table_nav_ul .ngx-pagination li a {
+    text-decoration: none !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

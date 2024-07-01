@@ -1,0 +1,102 @@
+<div class="plr-15">
+  <div class="d-block bg_white border-radius-10 ptrbl_15 mb-25">
+    <div class="table_top_filter clearfix">
+      <div class="pull-left table_heading">
+        <h3>List User</h3>
+      </div>
+      <div class="pull-right clearfix">
+        <div class="d-inlineblock table_search_bg">
+          <input
+            type="text"
+            class="table_search"
+            placeholder="Search here.."
+            [(ngModel)]="searchKeyword"
+            (ngModelChange)="filterData($event)"
+          />
+          <i class="icon-search1"></i>
+        </div>
+        <div class="ml-3 d-inlineblock">
+          <span class="pr-2 light_text">Show</span>
+          <select
+            class="table_lineselect custom-select"
+            (change)="changePageSize($event)"
+          >
+            <option selected>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+          </select>
+        </div>
+
+        <!-- <button class="btn_secondary ml-3 filter-popup" (click)="openDialog()"><span -->
+        <a
+          class="btn_primary ml-3"
+          style="cursor: pointer"
+          (click)="OpenContact($event)"
+          >Add Contact</a
+        >
+      </div>
+    </div>
+    <div class="table_bg">
+      <table class="table_style1" cellpadding="0" cellspacing="0">
+        <tr>
+          <th style="width: 15%">First Name</th>
+          <th style="width: 10%">Last Name</th>
+          <th style="width: 15%">Email</th>
+          <th style="width: 15%">Address</th>
+          <th style="width: 15%">City</th>
+          <th style="width: 15%">State</th>
+          <th style="width: 15%">Country</th>
+          <th style="width: 15%">PhoneNumber</th>
+          <th style="width: 4%" class="text-center">Action</th>
+        </tr>
+
+        <tr *ngFor="let user of data">
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.state }}</td>
+          <td>{{ user.country }}</td>
+          <td>{{ user.phoneNumber }}</td>
+          <td>
+            <div class="dropdown" (click)="toggleDropdown($event)">
+              <button class="action_link dropbtn">&#8226;&#8226;&#8226;</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#" (click)="navigateToEdit($event, user.contactId)"
+                  ><i class="icon-edit"></i><span>Edit</span></a
+                >
+                <a (click)="removeUser(user.contactId)"
+                  ><img
+                    src="../../../assets/bin.png"
+                    alt="Delete Icon"
+                    style="width: 24px; height: 24px"
+                  /><span>Delete</span></a
+                >
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function (event) {
+    if (!event.target.matches(".action_link")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>
